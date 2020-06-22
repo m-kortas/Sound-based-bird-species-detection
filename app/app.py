@@ -1,7 +1,5 @@
-#import flask
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 import pandas as pd
-import sys, os
 import librosa  
 import ffmpeg
 import librosa.display
@@ -16,9 +14,8 @@ from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.layers import Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.applications import MobileNetV2
-from keras.preprocessing.image import load_img,img_to_array
+from keras.preprocessing.image import img_to_array
 from PIL import Image
-from werkzeug import secure_filename
 
 app = Flask(__name__)
 
