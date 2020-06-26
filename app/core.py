@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect
 import pandas as pd
 import librosa  
 import ffmpeg
@@ -27,8 +27,8 @@ def fig2img(fig):
     w, h, d = buf.shape
     return Image.frombytes("RGB",(w,h),buf.tostring())
 
-def create_spectogram(file):
-    ''' loads audio file and creates spectogram '''
+def create_spectrogram(file):
+    ''' loads audio file and creates spectrogram '''
     signal, sr = librosa.load(file,duration=10)   
     fig = gcf()
     DPI = fig.get_dpi()
@@ -54,7 +54,7 @@ def create_spectogram(file):
     return image, fig
 
 def predict(model, image):
-    ''' makes prediction out of the spectogram '''
+    ''' makes prediction out of the spectrogram '''
     net = MobileNetV2(include_top=False,
                             weights='imagenet',
                             input_tensor=None,
