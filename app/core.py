@@ -70,6 +70,13 @@ def predict(model, image):
     pred = loaded_model.predict(image)
     return pred
 
+def create_bird_path(bird):
+    img_path = '/static/images/'
+    bird = bird.lower()
+    img_file = bird + '.jpg'
+    bird_path = img_path + img_file
+    return bird_path
+
 def create_result(pred, classes):
     ''' creates results (bird class and probability) ''' 
     top = np.argsort(pred[0])[:-2:-1]
