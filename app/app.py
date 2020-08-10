@@ -41,9 +41,7 @@ def prediction():
         spectrogram = "data:image/png;base64,"
         spectrogram += base64.b64encode(pngImage.getvalue()).decode('utf8')
 
-        if result['bird'] == 'Parus':
-            bird_path = '/static/images/parus.jpg'
-
+        bird_path = create_bird_path(result['bird'])
         return render_template("result.html", text = text, image = spectrogram, bird = bird_path)
     else:
         error = 'Wrong file format'
