@@ -1,0 +1,159 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	color: #5B5A54;
+}
+/*
+.arrow-up {
+  width: 1118px; 
+  height: 20%; 
+  border-left: 1118px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 324px solid transparent;
+  border-bottom: 1118px solid white;
+  position: center;
+left: 18.47%;
+right: -43.82%;
+top: -16.8%;
+bottom: 53.22%;
+/*scale: 266px;
+scale:-172px;*/
+    /*  border-bottom: 100px solid red;<br />
+      border-left: 25px solid transparent;<br />
+      border-right: 25px solid transparent;<br />
+      height: 0;<br />
+      width: 100px;*/
+
+}
+*/
+
+
+/*body { background-color: #CCE5E2;
+
+}*/
+
+
+.header-container{
+	max-width: 100%;
+	height: 931px;
+	background-image: url("https://ibb.co/KxMMn4N");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+.About{
+font-size: 20px;
+/*text-align: right;
+*/text-align: justify;
+padding-top: 10px;
+/*margin-left: 25%;
+*/
+}
+p{
+color: #5B5A54;
+}
+.left{
+text-align:left;
+}
+.right{
+text-align: right;
+}
+h1{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 1200;
+font-size: 54px;
+line-height: 80px;
+padding-top: 40px;
+}
+.yellow{
+	color: #F7DE40;
+
+}
+
+/*img{
+	position: relative;
+/*max-width: 63%;*/
+width: auto;
+height: 700px;
+left: 0px;
+top: 0px;
+}*/
+
+form{
+	position: absolute;
+}
+ @media(max-width: 1020px){
+	label{
+margin-left: 10%;
+justify-content: center;
+font-size: 70px; 
+
+	}
+	.TOP{
+	justify-content: center;
+}
+
+	form{
+		margin-left: 30%;
+	}
+}
+@media(min-width: 1020px){
+label{
+/*margin-right: 15%; 
+*/font-size: 40px;
+}}
+
+@media(min-width: 1080px){
+label{
+/*margin-right: 35%; 
+*/font-size: 40px;
+}}
+/* form{
+ 	position: absolute;
+width: 588px;
+height: 163px;
+left: 730px;
+top: 477px;
+	margin-left: 730px;
+margin-top: 477px;
+
+ }
+*/
+
+.owl-carousel {
+  max-width: 320px;
+  .owl-nav {
+    padding-top: .4em;
+    font-family: sans-serif;
+    font-size: .8em;
+    > div {
+      padding: .4em 1.4em;
+      border: 1px solid #333;
+      background: #000;
+      color: white;
+      border-radius: .4em;
+      background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(0, 0, 0, .2));
+      box-shadow: .1em .1em .4em rgba(0, 0, 0, .5);
+      &:hover {
+        background-color: #333;
+      }
+    }
+    .owl-prev {
+      float: left;
+    }
+    .owl-next {
+      float: right;
+    }
+  }
+}
+
+
+

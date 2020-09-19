@@ -30,19 +30,27 @@ def prediction():
         image, fig = create_spectrogram(file)
         pred = predict(model, image)
         result = create_result(pred, classes)
-
-        if result['probability'] > 50:
-            text = 'There is a ' + str(result['probability']) + '% chance that it is a ' + result['bird']
-        else:
-            text = 'Tt is not any of our 5 birds!'
-
+        
         pngImage = io.BytesIO()
         FigureCanvas(fig).print_png(pngImage)
         spectrogram = "data:image/png;base64,"
         spectrogram += base64.b64encode(pngImage.getvalue()).decode('utf8')
 
-        bird_path = create_bird_path(result['bird'])
-        return render_template("result.html", text = text, image = spectrogram, bird = bird_path)
+        if result['probability'] > 50:
+          #  text = 'There is a ' + str(result['probability']) + '% chance that it is a ' + result['bird'] to be done in the template
+            bird_path = create_bird_path(result['bird'])
+            probability = str(result['probability'])
+            bird_type = result['bird']
+            name, en_name, desc = get_bird_data(bird_type)
+            
+            return render_template("result.html", image = spectrogram, bird = bird_path, probability = probability,
+                                  bird_type = bird_type, name = name, en_name = en_name, desc = desc)
+
+        else:
+          #  text = 'It is not any of our 5 birds!' to be done in the template
+        #    bird_path = '/static/images/not_a_bird.jpg' to be done in the template
+
+            return render_template("not_a_bird.html", image = spectrogram)
     else:
         error = 'Wrong file format'
         return render_template("error.html", error = error)

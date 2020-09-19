@@ -70,6 +70,14 @@ def predict(model, image):
     pred = loaded_model.predict(image)
     return pred
 
+def get_bird_data(bird):
+    df = pd.read_excel('bird_data.xlsx')
+    df = df[df['species']==bird].reset_index(drop=True)
+    name = df['name'][0]
+    en_name = df['en_name'][0]
+    desc = df['desc'][0]
+    return name, en_name, desc
+
 def create_bird_path(bird):
     img_path = '/static/images/'
     bird = bird.lower()

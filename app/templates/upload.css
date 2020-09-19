@@ -1,0 +1,55 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*.form{
+	position: absolute;
+	top: 80px;
+  right: 0;
+  left:50%;
+  width: 200px;
+  height: 100px;
+ 
+
+}*/
+/*.container{
+	padding: 1080px, 1080px;
+}
+.image{
+	position: relative;
+
+}*/
+/*.hero-home{
+	width:1080px;
+	height: 961px;
+}*/
+.yellow{
+	color: #F7DE40;
+
+}
+@media(max-width: 899px){
+	label{
+margin-right: 0px;
+
+	}
+}
+@media(max-width: 1900px){
+label{
+margin-right: 35%; 
+font-size: 40px;
+}}
+/*img {
+  width: 1920px;
+  
+  object-fit: cover;
+}*/
+
+
