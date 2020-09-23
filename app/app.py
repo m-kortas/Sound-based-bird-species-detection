@@ -20,6 +20,7 @@ def allowed_file(filename):
 @app.route("/prediction", methods=["POST"]) 
 def prediction():
     ''' makes prediction (uploads file, creates spectrogram, applies neural networks and displays result on result page) '''
+    file = None
     file = request.files['file']
     
     if not file or file.filename == '':

@@ -1,9 +1,10 @@
 {% extends "base.html"%}
 {% block content%}
-<label style="text-align: center; justify-content: center; font-family: Poppins; font-size: 40px;"> {{ text }} </label>{% endblock %}
+<label style="text-align: center; justify-content: center; font-family: Poppins; font-size: 35px; padding-top: 30px; margin-left: 10px;"> It's <span class="yellow">not</span> a <span class="yellow">bird</span> mate! </label>{% endblock %}
 {% block form %}
-  <img style="padding-top: 50px;" src="{{ image }}"/> 
-       <img style="padding-top: 50px;" src="{{ bird }}"/>
+  <img style="padding-top: 55px; max-height: 250px; max-width: auto;" src="static/images/travolta.gif"/>
+  <img style="padding-top: 55px; max-height: 250px; max-width: auto;" src="{{ image }}"/> 
+      
 
 {% endblock %}
 

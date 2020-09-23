@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="view-port" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Birds discovery!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+  
+</head>
+
+
+<body>
+
+<div class="container body-container">
+
+
+<div class="container">
+
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+      <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="#Contact"><b>Contact us</b></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="#About"><b>About the project</b></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="#home"><b>Home</b></a>
+  </li>
+</ul>
+
+<section id="home">
+
+
+                    <div class="row justify-content-start" style="padding-top:10px;">
+
+                <div class="col-lg-6 hidden-sm hidden-xs" style="padding-top:10px;">
+
+                      <img style="max-height:961px;max-width:700px;" src="static/images/ptak1.png" class="img-responsive" alt="Responsive image" />
+
+
+                </div>
+
+<!-- 
+                <div class="col hidden-lg hidden-sm hidden-md" style="padding-top:10px;">
+
+                      <img style="max-height:961px;max-width:700px;" src="static/images/ptak1.png" class="img-responsive" alt="Responsive image" />
+
+
+                </div> -->
+
+
+                <div class="col-lg-6 col-sm-12" style="padding-top:10px;">
+
+                <div class="row justify-content-start" style="padding-top:75px; padding-left: 150px; " >
+                     {% block content %} {% endblock %}
+
+
+                </div>
+
+
+
+                <div class="row justify-content-end" style="padding-top:10px;">
+
+                <div class="col col-sm-12" style="padding-top:30px;">
+                {% block form%} {% endblock %}
+
+          
+                </div>
+              
+             
+                </div>
+                </div>
+
+
+</div></div>
+
+</section>
+
+<section style="padding-top: 0px;" id="About">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="  col-lg-3 hidden-sm hidden-xs"> 
+            <div class="vector" ><svg width="226" height="595" viewBox="0 0 226 595" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 595L226 0H65.8425L0 59.263V595Z" fill="#229082"/>
+</svg>
+
+</div></div>
+
+   
+      <div class="col-lg-9 col-sm-12" style="padding-top: 0px;">
+<h1 class="right" style=" color: #F7DE40;">About the project</h1>
+   
+<p class="About">The project, created by a group of women from the local Polish chapter of Women in Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a real-life problem which machine learning can help to solve.</p>
+<p class="About">The web application has been developed by <a href="https://www.linkedin.com/in/mkortas/">Magdalena Kortas</a> (backend) <a href="www.behance.net/stawiskart">Aleksandra Zachariasz</a> (frontend) </p>
+<p class="About">Are you curious about how the AI solution has been built? Check our <a href="https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b">Medium</a> article. </p>
+
+
+<section style="padding-top: 0px;" id="Contact">
+  <div class="container">
+    <div class="row justify-content-start">
+       <div class="col-lg-9 col-sm-12" style="padding-top: 0px;">
+<h1 class="left" style=" color: #F7DE40; padding-bottom: 40px;">Contact us</h1>
+
+<div class="row justify-content-center">
+       <div class="col-lg-6 col-sm-12" style="padding-top: 0px;">
+<div class="card" style="width: 18rem;">
+  <img src="static/images/madzia.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Magdalena Kortas</h5>
+    <p class="card-text">Data Scientist, WiMLDS Trójmiasto (Poland) co-founder, AI for Good & Data storytelling enthusiast</p>
+    <a href="https://www.linkedin.com/in/mkortas/" class="btn btn-primary">LinkedIn Profile</a>
+  </div>
+</div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-6 col-sm-12" style="padding-top: 0px;">
+<div class="card" style="width: 18rem;">
+  <img src="static/images/olala.png" class="card-img-top"  class="rounded-circle" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Aleksandra Zachariasz</h5>
+    <p class="card-text">Graphic Designer, Frontend Developer, hoobyist coder, beautiful views catcher</p>
+    <a href="http://www.behance.net/stawiskart" class="btn btn-primary">Behance Portfolio</a>
+  </div>
+</div></div></div>
+
+ </div>
+ </div>
+</div>
+</section>
+ </div>
+ </div>
+</div>
+</section>
+
+ </div>
+   </body>
+</html>

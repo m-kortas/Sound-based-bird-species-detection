@@ -1,9 +1,11 @@
 {% extends "base.html"%}
 {% block content%}
-<label style="text-align: center; justify-content: center; font-family: Poppins; font-size: 40px;"> {{ text }} </label>{% endblock %}
+<label style="  text-align: justify; justify-content: center;"><p style="font-family: Poppins; font-size: 35px;">There is a <span class="yellow">{{ probability }}%</span> chance </p><p style="font-family: Poppins;font-size: 35px;"> that your bird is a <span class="yellow">{{ bird_type }}</span>!</p></label>{% endblock %}
 {% block form %}
-  <img style="padding-top: 50px;" src="{{ image }}"/> 
-       <img style="padding-top: 50px;" src="{{ bird }}"/>
+  <img style="padding-top: 15px; height: 200px; width: auto;" src="{{ image }}"/> 
+       <img style="padding-top: 15px;height: 200px; width: auto" src="{{ bird }}"/>
+       <p style="padding-top: 20px; justify-content: left; text-align: justify-all; margin-right: 25%;">{{ desc }}</p>
+
 
 {% endblock %}
 
