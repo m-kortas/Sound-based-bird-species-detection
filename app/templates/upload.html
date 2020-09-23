@@ -1,5 +1,6 @@
 {% extends "base.html"%}
 {% block content%}
+
 <label style=" padding-top: 15px; text-align: center; justify-content: center;"><p style="font-family: Poppins; font-size: 35px;">Find out what <span class="yellow">bird</span> </p><p style="font-family: Poppins;font-size: 35px;">is <span class="yellow">singing</span> nearby!</p> </label>
 {% endblock %}
 {% block form %}
@@ -8,7 +9,7 @@
    <div class="card-body" style=" color:black;">
    <form style="margin-top: 5px;" action = "http://localhost:5000/prediction" method = "POST" 
                          enctype = "multipart/form-data" >
-                         <label class="btn btn-light" style="margin-left: 0px; " for="exampleFormControlFile1">Choose sounds!</label>
+                         <label class="btn btn-light" style="margin-left: 0px; " for="exampleFormControlFile1">Choose file</label>
                          <input style="width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;" type = "file" name = "file"   class="form-control-file" id="exampleFormControlFile1">
                          <input style="margin-left: 60px; background-color:#F7DE40; margin-top: 0px; margin-bottom: 0px;" type = "submit" class="btn btn-light" value="Discover!">
                     </form>
