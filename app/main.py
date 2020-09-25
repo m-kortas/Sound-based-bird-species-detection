@@ -38,7 +38,7 @@ def prediction():
         spectrogram = "data:image/png;base64,"
         spectrogram += base64.b64encode(pngImage.getvalue()).decode('utf8')
 
-        if result['probability'] > 50:
+        if result['probability'] > 74:
             bird_path = create_bird_path(result['bird'])
             probability = str(result['probability'])
             bird_type = result['bird']
