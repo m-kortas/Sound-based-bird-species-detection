@@ -60,4 +60,4 @@ def error413(e):
     return render_template("error.html", error = error), 413    
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run()
