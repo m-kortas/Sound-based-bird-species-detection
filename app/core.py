@@ -1,3 +1,8 @@
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+from matplotlib.pyplot import gcf
 from flask import Flask, render_template, request, flash, redirect
 import pandas as pd
 import librosa  
@@ -7,9 +12,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import io
 import base64
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
-from matplotlib.pyplot import gcf
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.layers import Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
