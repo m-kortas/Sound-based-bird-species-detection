@@ -11,6 +11,7 @@ import librosa.display
 import numpy as np
 import matplotlib.pyplot as plt
 import io
+import os
 import base64
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.layers import Flatten, Dense, Dropout
@@ -18,6 +19,10 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.applications import MobileNetV2
 from keras.preprocessing.image import img_to_array
 from PIL import Image
+
+THIS_DIR = os.path.dirname(os.path.realpath(__file__))
+BIRD_DATA = os.path.join(THIS_DIR, 'bird_data.xlsx') 
+
 
 def fig2img(fig):
     ''' Transforms matplotlib figure to image '''
@@ -73,7 +78,7 @@ def predict(model, image):
     return pred
 
 def get_bird_data(bird):
-    df = pd.read_excel('bird_data.xlsx')
+    df = pd.read_excel(BIRD_DATA)
     df = df[df['species']==bird].reset_index(drop=True)
     name = df['name'][0]
     en_name = df['en_name'][0]
@@ -81,7 +86,7 @@ def get_bird_data(bird):
     return name, en_name, desc
 
 def create_bird_path(bird):
-    img_path = '/static/images/'
+    img_path = '/static/images/'  
     bird = bird.lower()
     img_file = bird + '.jpg'
     bird_path = img_path + img_file
