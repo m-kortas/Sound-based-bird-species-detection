@@ -42,3 +42,6 @@ padding-top: 40px;
 	color: #F7DE40;
 
 }
+html{
+	scroll-behavior: smooth;
+}
