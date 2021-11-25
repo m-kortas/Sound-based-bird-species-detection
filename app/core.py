@@ -21,7 +21,7 @@ from keras.preprocessing.image import img_to_array
 from PIL import Image
 
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
-BIRD_DATA = os.path.join(THIS_DIR, 'bird_data.xlsx') 
+BIRD_DATA = os.path.join(THIS_DIR, 'data', 'bird_data.xlsx') 
 
 
 def fig2img(fig):
