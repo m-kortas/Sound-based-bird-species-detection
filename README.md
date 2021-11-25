@@ -1,6 +1,13 @@
 Bird song recognition
 ==============================
 
+## About the project
+The project, created by a group of women from the local Polish chapter of Women in Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a real-life problem which machine learning can help to solve.
+
+The web application has been developed by Magdalena Kortas (backend - Deep Learning, Python and Flask) and Aleksandra Zachariasz (frontend - Flask, CSS, JS, HTML5 and graphic design).
+
+Are you curious about how the AI solution has been built? Check our **[Medium](https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b)**  article.
+
 ## Data download
 Analysis and modelling of Polish birds songs. Recordings were downloaded from the - **[xeno-canto.org](https://www.xeno-canto.org/)** which is a website dedicated to sharing bird sounds from all over the world (480k, September 2019). 
 
