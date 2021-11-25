@@ -6,7 +6,7 @@ NOT_A_BIRD = 'not_a_bird.html'
 UPLOAD = 'upload.html'
 RESULT = 'result.html'
 ERROR = 'error.html'
-model =  os.path.join(THIS_DIR, 'AM_mobilenet_5classes.h5')
+model =  os.path.join(THIS_DIR, 'model', 'model.h5')
 classes = np.array(['Acroc','Ember','Parus','Phyll','Sylvi'])
 ALLOWED_EXTENSIONS = {'wav'}
 
