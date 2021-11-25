@@ -2,7 +2,7 @@ Bird song recognition
 ==============================
 
 ## About the project
-The project, created by a group of women from the local Polish chapter of Women in Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a real-life problem which machine learning can help to solve.
+The project, created in 2020 by a group of women from the local Polish chapter of Women in Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a real-life problem which machine learning can help to solve.
 
 The web application has been developed by Magdalena Kortas (backend - Deep Learning, Python and Flask) and Aleksandra Zachariasz (frontend - Flask, CSS, JS, HTML5 and graphic design).
 
