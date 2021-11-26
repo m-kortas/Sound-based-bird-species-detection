@@ -1,4 +1,4 @@
-Bird song recognition
+Sound-based bird recognition Web Application
 ==============================
 
 ## About the project
