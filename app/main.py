@@ -1,3 +1,5 @@
 from waitress import serve
-from app import *
+
+from app import app
+
 serve(app)
