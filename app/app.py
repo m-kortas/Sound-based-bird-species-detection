@@ -15,7 +15,6 @@ matplotlib.use('Agg')
 
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 BIRD_DATA = os.path.join(THIS_DIR, 'data', 'bird_data.xlsx')
-THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 TEMPLATES = os.path.join(THIS_DIR, 'templates')
 NOT_A_BIRD = 'not_a_bird.html'
 UPLOAD = 'upload.html'
