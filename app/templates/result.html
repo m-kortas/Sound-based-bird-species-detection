@@ -1,17 +1,20 @@
 {% extends "base.html"%}
 {% block content%}
-<label style="  text-align: justify; justify-content: center;"><p style="font-family: Poppins; font-size: 35px;">There is a <span class="yellow">{{ probability }}%</span> chance </p><p style="font-family: Poppins;font-size: 35px;"> that your bird is a/an <span class="yellow">{{ bird_type }}</span>!</p></label>{% endblock %}
+<label style="  text-align: justify; justify-content: center;"><p style="font-family: Poppins; font-size: 35px;">There
+    is a <span class="yellow">{{ probability }}%</span> chance </p>
+    <p style="font-family: Poppins;font-size: 35px;"> that your bird is a/an <span class="yellow">{{ bird_type }}</span>!
+    </p></label>{% endblock %}
 {% block form %}
-  <img style="padding-top: 15px; height: 200px; width: auto;" src="{{ image }}"/> 
+<img src="{{ image }}" style="padding-top: 15px; height: 200px; width: auto;"/>
 
-       <img style="padding-top: 15px;height: 200px; width: auto" src="{{ bird }}"/>
-         <div   style=" margin-right: 0%;  padding-top: 15px; "> 
+<img src="{{ bird }}" style="padding-top: 15px;height: 200px; width: auto"/>
+<div style=" margin-right: 0%;  padding-top: 15px; ">
 
-<p style="font-family: Poppins; font-size: 12px;">{{name}} or {{en_name}}</p>
+    <p style="font-family: Poppins; font-size: 12px;">{{name}} or {{en_name}}</p>
 
 
 </div>
-       <p style="padding-top: 0px; justify-content: left; text-align: justify-all; margin-right: 25%;">{{ desc }}</p>
+<p style="padding-top: 0px; justify-content: left; text-align: justify-all; margin-right: 25%;">{{ desc }}</p>
 
 
 {% endblock %}

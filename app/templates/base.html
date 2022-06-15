@@ -1,182 +1,198 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-  <meta name="view-port" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Birds discovery!</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage1.css') }}">
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="view-port">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <title>Birds discovery!</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static',filename='styles/mainpage1.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static',filename='bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
 
 <body>
 
 <div class="container-fluid">
-	<div class="navigation">
-		<ul class="nav justify-content-end">
-		  <li class="nav-item">
-		    <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="#Contact">Contact us</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="#About">About the project</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link smooth-scroll" style=" color: #5B5A54" href="http://www.birddetection.ml/">Home</a>
-		  </li>
-		</ul>
-	</div>
+    <div class="navigation">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#Contact" style=" color: #5B5A54">Contact us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#About" style=" color: #5B5A54">About the project</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="http://www.birddetection.ml/" style=" color: #5B5A54">Home</a>
+            </li>
+        </ul>
+    </div>
 
 
+    <section id="home">
 
-	<section id="home">
+
+        <div class="row justify-content-start" style="padding-top:10px;">
 
 
-      	<div class="row justify-content-start" style="padding-top:10px;">
-
-           
             <div class="col-lg-6 hidden-sm hidden-xs" style="padding-top:10px;">
 
-            	
-            	<img style="max-height:961px;max-width:700px;" src="static/images/ptak1.png" class="img-responsive" alt="Responsive image" />
+
+                <img alt="Responsive image" class="img-responsive" src="static/images/ptak1.png"
+                     style="max-height:961px;max-width:700px;"/>
 
 
             </div>
-
 
 
             <div class="col-lg-6 col-sm-12" style="padding-top:10px;">
 
-                <div class="row justify-content-start" style="padding-top:80px; padding-left: 10px; " >
-                     {% block content %} {% endblock %}
+                <div class="row justify-content-start" style="padding-top:80px; padding-left: 10px; ">
+                    {% block content %} {% endblock %}
 
 
                 </div>
-
 
 
                 <div class="row justify-content-center" style="padding-top:10px;">
 
-                	<div class="col col-sm-12" style="padding-top:0px; margin-right: 0px;">
-                		{% block form%} {% endblock %}
+                    <div class="col col-sm-12" style="padding-top:0px; margin-right: 0px;">
+                        {% block form%} {% endblock %}
 
-          
-                	</div>
-              
-             
+
+                    </div>
+
+
                 </div>
             </div>
 
 
-		</div>
-	</section>
-
-	<section style="padding-top: 0px;" id="About">
- 		
-    		<div class="row justify-content-end">
-      			<div class="  col-lg-3 hidden-sm hidden-xs"> 
-           			 <div class="vector" ><svg width="226" height="595" viewBox="0 0 226 595" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0 595L226 0H65.8425L0 59.263V595Z" fill="#229082"/>
-							</svg>
-
-					</div>
-
-				</div>
-
-   
-      <div class="col-lg-9 col-sm-12" style="padding-top: 0px;">
-			<h1 class="right" style=" color: #F7DE40;">About the project</h1>
-			   
-			<p class="About">The project, created by a group of women from the local Polish chapter of Women in Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a real-life problem which machine learning can help to solve.</p>
-			<p class="About">The web application has been developed by <a href="https://www.linkedin.com/in/mkortas/">Magdalena Kortas</a> (backend - Deep Learning, Python and Flask) <a href="http://www.behance.net/stawiskart">Aleksandra Zachariasz</a> (frontend - Flask, CSS, JS, HTML5 and graphic design). </p>
-			<p class="About">Are you curious about how the AI solution has been built? Check our <a href="https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b">Medium</a> article. </p>
-		
-		
-	
-
-
-
-<section style="padding-top: 0px;" id="Contact">
-<div class="container">
-    <div class="row justify-content-start">
-       <div class="col-lg-6 col-sm-12" style="padding-top: 0px;">
-<h1 class="left" style=" color: #F7DE40; padding-bottom: 40px;">Contact us</h1>
-
-<div class="row justify-content-start">
-       <div class="col-lg-4 col-sm-12" style="padding-top: 0px;">
-<div style="width: 18rem; text-align: center;">
-  <img src="static/images/madzia.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Magdalena Kortas</h5>
-    <p class="card-text">Data Scientist, WiMLDS Trójmiasto (Poland) co-founder, AI for Good & Data storytelling enthusiast</p>
-    <a href="https://www.linkedin.com/in/mkortas/" class="btn btn-primary">LinkedIn Profile</a>
-  </div>
-</div>
-</div>
-<div class="row justify-content-center">
-  <div class="col-lg-4 col-md-12 col-sm-12" style="padding-right: 40px; ">
-<div  style="width: 18rem; text-align: center;">
-  <img src="static/images/olala.png" class="card-img-top"  class="rounded-circle" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Aleksandra Zachariasz</h5>
-    <p class="card-text" style="justify-content: center; text-align: center; padding-bottom: 20px;">Graphic Designer, Frontend Developer, coder, Illustrator, beautiful views catcher</p>
-    <a href="http://www.behance.net/stawiskart" class="btn btn-primary">Behance Portfolio</a>
-  </div>
-</div></div>
-<div class="row justify-content-end">
-  <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left: 0px;">
-<div  style="width: 18rem; text-align: center;">
-  <img src="static/images/WDlogo.png" class="card-img-top"  class="rounded-circle" alt="...">
-  <div class="card-body" >
-    <h5 class="card-title">WiMLDS</h5>
-    <p class="card-text" style="justify-content: center; text-align: center;">Our mission is to support and promote women and gender minorities in Data Science</p>
-     <a href="https://www.linkedin.com/company/18767082/" class="btn btn-primary">LinkedIn Profile</a>
-  </div>
-</div></div></div></div>
-
- </div>
- </div>
-</div></div>
-
-<section style="padding-top: 0px;" id="Partners">
-    
-        <div class="row justify-content-end">
-          <div class="col-lg-9 col-sm-12" style="padding-top: 40px; padding-bottom: 70px;" >
-      <h1 class="right" style=" color: #F7DE40;">Partners</h1>
-      <div class="right">
-          <img src="static/images/voicelab.png" style="max-width: 200px; padding-top: 20px;">
-       </div>
-    </div>  
         </div>
-  
+    </section>
+
+    <section id="About" style="padding-top: 0px;">
+
+        <div class="row justify-content-end">
+            <div class="  col-lg-3 hidden-sm hidden-xs">
+                <div class="vector">
+                    <svg fill="none" height="595" viewBox="0 0 226 595" width="226" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 595L226 0H65.8425L0 59.263V595Z" fill="#229082"/>
+                    </svg>
+
+                </div>
+
+            </div>
 
 
+            <div class="col-lg-9 col-sm-12" style="padding-top: 0px;">
+                <h1 class="right" style=" color: #F7DE40;">About the project</h1>
+
+                <p class="About">The project, created by a group of women from the local Polish chapter of Women in
+                    Machine Learning & Data Science (WiMLDS), was designed to be a training project & collaboration on a
+                    real-life problem which machine learning can help to solve.</p>
+                <p class="About">The web application has been developed by <a
+                        href="https://www.linkedin.com/in/mkortas/">Magdalena Kortas</a> (backend - Deep Learning,
+                    Python and Flask) <a href="http://www.behance.net/stawiskart">Aleksandra Zachariasz</a> (frontend -
+                    Flask, CSS, JS, HTML5 and graphic design). </p>
+                <p class="About">Are you curious about how the AI solution has been built? Check our <a
+                        href="https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b">Medium</a>
+                    article. </p>
 
 
+                <section id="Contact" style="padding-top: 0px;">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-6 col-sm-12" style="padding-top: 0px;">
+                                <h1 class="left" style=" color: #F7DE40; padding-bottom: 40px;">Contact us</h1>
+
+                                <div class="row justify-content-start">
+                                    <div class="col-lg-4 col-sm-12" style="padding-top: 0px;">
+                                        <div style="width: 18rem; text-align: center;">
+                                            <img alt="..." class="card-img-top" src="static/images/madzia.png">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Magdalena Kortas</h5>
+                                                <p class="card-text">Data Scientist, WiMLDS Trójmiasto (Poland)
+                                                    co-founder, AI for Good & Data storytelling enthusiast</p>
+                                                <a class="btn btn-primary" href="https://www.linkedin.com/in/mkortas/">LinkedIn
+                                                    Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-4 col-md-12 col-sm-12" style="padding-right: 40px; ">
+                                            <div style="width: 18rem; text-align: center;">
+                                                <img alt="..." class="rounded-circle"
+                                                     class="card-img-top" src="static/images/olala.png">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Aleksandra Zachariasz</h5>
+                                                    <p class="card-text"
+                                                       style="justify-content: center; text-align: center; padding-bottom: 20px;">
+                                                        Graphic Designer, Frontend Developer, coder, Illustrator,
+                                                        beautiful views catcher</p>
+                                                    <a class="btn btn-primary" href="http://www.behance.net/stawiskart">Behance
+                                                        Portfolio</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left: 0px;">
+                                                <div style="width: 18rem; text-align: center;">
+                                                    <img alt="..." class="rounded-circle"
+                                                         class="card-img-top" src="static/images/WDlogo.png">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">WiMLDS</h5>
+                                                        <p class="card-text"
+                                                           style="justify-content: center; text-align: center;">Our
+                                                            mission is to support and promote women and gender
+                                                            minorities in Data Science</p>
+                                                        <a class="btn btn-primary"
+                                                           href="https://www.linkedin.com/company/18767082/">LinkedIn
+                                                            Profile</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="Partners" style="padding-top: 0px;">
+
+                        <div class="row justify-content-end">
+                            <div class="col-lg-9 col-sm-12" style="padding-top: 40px; padding-bottom: 70px;">
+                                <h1 class="right" style=" color: #F7DE40;">Partners</h1>
+                                <div class="right">
+                                    <img src="static/images/voicelab.png" style="max-width: 200px; padding-top: 20px;">
+                                </div>
+                            </div>
+                        </div>
 
 
-
-</section>
-
+                    </section>
 
 
-
-
-</section>
-</section>
-</div>	
+                </section>
+    </section>
+</div>
 
 </div>
 </div>
 
 </body>
-
 
 
 </html>

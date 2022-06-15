@@ -1,10 +1,11 @@
 {% extends "base.html"%}
 {% block content%}
-<label style="text-align: center; justify-content: center; font-family: Poppins; font-size: 35px; padding-top: 30px; margin-left: 10px;"> It's <span class="yellow">not</span> a <span class="yellow">bird</span> mate! </label>{% endblock %}
+<label style="text-align: center; justify-content: center; font-family: Poppins; font-size: 35px; padding-top: 30px; margin-left: 10px;">
+    It's <span class="yellow">not</span> a <span class="yellow">bird</span> mate! </label>{% endblock %}
 {% block form %}
-  <img style="padding-top: 55px; max-height: 250px; max-width: auto;" src="static/images/travolta.gif"/>
-  <img style="padding-top: 55px; max-height: 250px; max-width: auto;" src="{{ image }}"/> 
-      
+<img src="static/images/travolta.gif" style="padding-top: 55px; max-height: 250px; max-width: auto;"/>
+<img src="{{ image }}" style="padding-top: 55px; max-height: 250px; max-width: auto;"/>
+
 
 {% endblock %}
 

@@ -1,31 +1,39 @@
 {% extends "base.html"%}
 {% block content%}
 
-<label style=" padding-top: 15px; text-align: center; justify-content: center;"><p style="font-family: Poppins; font-size: 35px;">Find out what <span class="yellow">bird</span> </p><p style="font-family: Poppins;font-size: 35px;">is <span class="yellow">singing</span> nearby!</p>
+<label style=" padding-top: 15px; text-align: center; justify-content: center;"><p
+        style="font-family: Poppins; font-size: 35px;">Find out what <span class="yellow">bird</span></p>
+    <p style="font-family: Poppins;font-size: 35px;">is <span class="yellow">singing</span> nearby!</p>
     <p style="font-family: Poppins; font-size: 15px;">Upload a WAV file (max 16MB) to discover.</p></label>
 {% endblock %}
 {% block form %}
-<div class="card"  style="width:32rem; margin-right: 0%;  padding-bottom: 15px; padding-top: 15px; "> 
-<div class="form">
-   <div class="card-body" style=" color:black;">
-   <form style="margin-top: 5px;" action = "/prediction" method = "POST" 
-                         enctype = "multipart/form-data" >
-                         <label class="btn btn-light" style="margin-left: 0px; " for="exampleFormControlFile1">Choose file</label>
-                         <input style="width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;" type = "file" name = "file"   class="form-control-file" id="exampleFormControlFile1">
-                         <input style="margin-left: 60px; background-color:#F7DE40; margin-top: 0px; margin-bottom: 0px;" type = "submit" class="btn btn-light" value="Discover!">
-                    </form>
+<div class="card" style="width:32rem; margin-right: 0%;  padding-bottom: 15px; padding-top: 15px; ">
+    <div class="form">
+        <div class="card-body" style=" color:black;">
+            <form action="/prediction" enctype="multipart/form-data" method="POST"
+                  style="margin-top: 5px;">
+                <label class="btn btn-light" for="exampleFormControlFile1" style="margin-left: 0px; ">Choose
+                    file</label>
+                <input class="form-control-file"
+                       id="exampleFormControlFile1" name="file"
+                       style="width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;"
+                       type="file">
+                <input class="btn btn-light"
+                       style="margin-left: 60px; background-color:#F7DE40; margin-top: 0px; margin-bottom: 0px;"
+                       type="submit" value="Discover!">
+            </form>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-<div   style=" margin-right: 0%;  padding-top: 15px; "> 
+<div style=" margin-right: 0%;  padding-top: 15px; ">
 
-<p style="font-family: Poppins; font-size: 15px;">* The app recognises 5 species: <br>
-    The common chiffchaff,
-the great reed warbler,
-the yellowhammer,<br>
-the great tit and
-the Eurasian blackcap.
-</p>
+    <p style="font-family: Poppins; font-size: 15px;">* The app recognises 5 species: <br>
+        The common chiffchaff,
+        the great reed warbler,
+        the yellowhammer,<br>
+        the great tit and
+        the Eurasian blackcap.
+    </p>
 
 </div>
 

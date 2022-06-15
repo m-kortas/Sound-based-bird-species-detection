@@ -12,7 +12,6 @@ from core import (create_bird_path, create_result, create_spectrogram,
 
 matplotlib.use('Agg')
 
-
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 BIRD_DATA = os.path.join(THIS_DIR, 'data', 'bird_data.xlsx')
 TEMPLATES = os.path.join(THIS_DIR, 'templates')
@@ -25,13 +24,13 @@ classes = np.array(['Acroc', 'Ember', 'Parus', 'Phyll', 'Sylvi'])
 ALLOWED_EXTENSIONS = {'wav'}
 
 app = Flask(__name__)
-#app.secret_key = ""
+# app.secret_key = ""
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
 @app.route('/')
 def upload_file():
-    ''' renders upload page to upload audiofile '''
+    """ renders upload page to upload audiofile """
     return render_template(UPLOAD)
 
 
@@ -42,8 +41,8 @@ def allowed_file(filename):
 
 @app.route("/prediction", methods=["POST"])
 def prediction():
-    ''' makes prediction (uploads file, creates spectrogram, applies neural 
-    networks and displays result on result page) '''
+    """ makes prediction (uploads file, creates spectrogram, applies neural
+    networks and displays result on result page) """
     file = None
     file = request.files['file']
 
@@ -81,7 +80,7 @@ def prediction():
 
 
 @app.errorhandler(413)
-def error413(e):
+def error413():
     error = 'Too big file'
     return render_template(ERROR, error=error), 413
 
