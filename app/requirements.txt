@@ -1,4 +1,4 @@
-Flask==1.1.1
+Flask==2.3.2
 pandas==0.24.2
 librosa==0.7.0
 ffmpeg==1.4
